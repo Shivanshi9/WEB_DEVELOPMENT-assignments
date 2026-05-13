@@ -14,3 +14,28 @@ document.querySelector("form").addEventListener("submit", (event) => {
   document.getElementById("Month").innerText = Months;
   document.getElementById("Days").innerText = Day;
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

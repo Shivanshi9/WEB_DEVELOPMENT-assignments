@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap icons link -->
+    <link 
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+</head>
+<body>
+    
+    <header class="h-25 bg-primary p-4 text-light text-center">
+       <h1>Coaching Institute Registration Form</h1> 
+    </header>
+
+    <form class="m-5 ">
+        <div class="container h-75 d-flex flex-column form-control">
+
+            <div id="PD"  class="border rounded border-primary-subtle p-3 mb-2">
+                 <h4 class="mb-4">Personal Information:</h4>
+                <div>
+                    Full Name:
+                    <input type="text" placeholder="Enter your name" class="widthofinput mx-3 mb-3" required>
+                </div>
+                <div>
+                    Email Address:
+                    <input type="email" placeholder="Enter your email" class="widthofinput mx-3 mb-3" required>
+                </div>
+                <div>
+                    Mobile Number:
+                    <input type="number" placeholder="Enter your number" class="widthofinput mx-3 mb-3" required>
+                </div>
+                <div>
+                    Date of Birth:
+                    <input type="date" placeholder="Enter your DOB" class="widthofinput mx-3 mb-3" required>
+                </div>
+            </div>
+
+            <div id="AD"  class="border rounded border-primary-subtle p-3 mb-2">
+                <h4 class="mb-4">Acadmic Details</h4>
+                <div>
+                    Last Completed Qualification:
+                    <select class=" mx-3 mb-3">
+                        <option>Select</option>
+                        <option>10th</option>
+                        <option>12th</option>
+                        <option>Postgraduate</option>
+                        <option>Undergraduate</option>
+                    </select>
+                </div>
+                <div>
+                    Percentage/Grade in Last Qualification:
+                    <input type="number" min="0" max="100" class=" mx-3 mb-3">  %
+                </div>
+            </div>
+
+            <div id="CI" class="border rounded border-primary-subtle p-3 mb-2">
+                <h4 class="mb-4"> Course Information:</h4>
+                <div>
+                     Preferred Course:
+                      <select class="mx-3 mb-3">
+                        <option>Select</option>
+                        <option>IIT-JEE</option>
+                        <option>NEET</option>
+                        <option>GATE</option>
+                    </select>
+                </div>
+                <div>
+                    Batch Timing Preference:
+                    <select class="mx-3 mb-3 form-select">
+                        <option>Select</option>
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                        <option>Weekend</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="Address" class="border rounded border-primary-subtle p-3 mb-2">
+                <h4 class="mb-4">Address</h4>
+                <div class="d-flex flex-row">
+                    Residential Address:
+                    <textarea 
+                        id="address"
+                        name="address"
+                        rows="1"
+                        cols="40"
+                        placeholder="Enter house number, street, city, and pin code"
+                        class="mx-3 mb-3"
+                        required>
+                    </textarea>
+                </div>
+                <div>
+                    City:
+                    <input 
+                        type="text"
+                        id="city"
+                        placeholder="Enter city"
+                        pattern="[A-Za-z ]+"
+                        class="mx-3 mb-3"
+                        required>
+                </div>
+                <div>
+                    Pin Code:
+                    <input type="number" class="mx-3 mb-3" placeholder="pincode" required>
+                </div>
+            </div>
+           
+             <div id="Address" class="border rounded border-primary-subtle p-3 mb-2">
+                 <h4 class="mb-4">Guardian Details:</h4>
+                 <div>
+                    Guardian’s Full Name:
+                    <input type="text" placeholder="Enter full name" class="mx-3 mb-3">
+                 </div>
+                 <div>
+                    Guardian’s Contact Number:
+                    <input type="number" name="" class="mx-3 mb-3">
+                 </div>
+             </div>
+
+             <div id="Address" class="border rounded border-primary-subtle p-3 mb-2">
+                 <h4 class="mb-4">Additional Information:</h4>
+                 <div>
+                    How did you hear about us?:
+                    <select class="mx-3 mb-3 form-select" required>
+                        <option>Select</option>
+                        <option>Friend</option>
+                        <option>Internet</option>
+                        <option>Relative</option>
+                        <option>Ads</option>
+                    </select>
+                 </div>
+
+             </div>
+           
+            
+            
+       
+        </div>
+        
+    </form>
+
+
+     <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+</body>
+</html>
