@@ -1,163 +1,295 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap -->
-     <link
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
     <!-- bootstrap icons link -->
-    <link 
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-</head>
-<body>
-    
-    <header class="h-25 bg-primary p-4 text-light text-center">
-       <h1>Coaching Institute Registration Form</h1> 
+  </head>
+  <body class="bg-light">
+    <header class="h-25 bg-primary p-4 text-light text-center shadow">
+      <h1 class="fw-bold">Coaching Institute Registration Form</h1>
     </header>
 
-    <form class="m-5 ">
-        <div class="container h-75 d-flex flex-column form-control">
+    <form class="m-5">
+      <div
+        class="container h-75 d-flex flex-column form-control p-5 shadow rounded bg-white"
+      >
+        <div
+          id="PD"
+          class="border rounded border-primary-subtle p-4 mb-4 bg-light-subtle shadow"
+        >
+          <h4 class="mb-4 text-primary">Personal Information:</h4>
 
-            <div id="PD"  class="border rounded border-primary-subtle p-3 mb-2">
-                 <h4 class="mb-4">Personal Information:</h4>
-                <div>
-                    Full Name:
-                    <input type="text" placeholder="Enter your name" class="widthofinput mx-3 mb-3" required>
-                </div>
-                <div>
-                    Email Address:
-                    <input type="email" placeholder="Enter your email" class="widthofinput mx-3 mb-3" required>
-                </div>
-                <div>
-                    Mobile Number:
-                    <input type="number" placeholder="Enter your number" class="widthofinput mx-3 mb-3" required>
-                </div>
-                <div>
-                    Date of Birth:
-                    <input type="date" placeholder="Enter your DOB" class="widthofinput mx-3 mb-3" required>
-                </div>
-            </div>
+          <div class="d-flex flex-row text-center">
+            Full Name:
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Enter your name"
+              class="widthofinput mx-3 mb-3 form-control"
+              required
+            />
+          </div>
 
-            <div id="AD"  class="border rounded border-primary-subtle p-3 mb-2">
-                <h4 class="mb-4">Acadmic Details</h4>
-                <div>
-                    Last Completed Qualification:
-                    <select class=" mx-3 mb-3">
-                        <option>Select</option>
-                        <option>10th</option>
-                        <option>12th</option>
-                        <option>Postgraduate</option>
-                        <option>Undergraduate</option>
-                    </select>
-                </div>
-                <div>
-                    Percentage/Grade in Last Qualification:
-                    <input type="number" min="0" max="100" class=" mx-3 mb-3">  %
-                </div>
-            </div>
+          <div class="d-flex flex-row text-center">
+            Email Address:
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              class="widthofinput mx-3 mb-3 form-control"
+              required
+            />
+          </div>
 
-            <div id="CI" class="border rounded border-primary-subtle p-3 mb-2">
-                <h4 class="mb-4"> Course Information:</h4>
-                <div>
-                     Preferred Course:
-                      <select class="mx-3 mb-3">
-                        <option>Select</option>
-                        <option>IIT-JEE</option>
-                        <option>NEET</option>
-                        <option>GATE</option>
-                    </select>
-                </div>
-                <div>
-                    Batch Timing Preference:
-                    <select class="mx-3 mb-3 form-select">
-                        <option>Select</option>
-                        <option>Morning</option>
-                        <option>Afternoon</option>
-                        <option>Evening</option>
-                        <option>Weekend</option>
-                    </select>
-                </div>
-            </div>
+          <div class="d-flex flex-row text-center">
+            Mobile Number:
+            <input
+              type="number"
+              id="mobile"
+              placeholder="Enter your number"
+              class="widthofinput mx-3 mb-3 form-control"
+              required
+            />
+          </div>
 
-            <div id="Address" class="border rounded border-primary-subtle p-3 mb-2">
-                <h4 class="mb-4">Address</h4>
-                <div class="d-flex flex-row">
-                    Residential Address:
-                    <textarea 
-                        id="address"
-                        name="address"
-                        rows="1"
-                        cols="40"
-                        placeholder="Enter house number, street, city, and pin code"
-                        class="mx-3 mb-3"
-                        required>
-                    </textarea>
-                </div>
-                <div>
-                    City:
-                    <input 
-                        type="text"
-                        id="city"
-                        placeholder="Enter city"
-                        pattern="[A-Za-z ]+"
-                        class="mx-3 mb-3"
-                        required>
-                </div>
-                <div>
-                    Pin Code:
-                    <input type="number" class="mx-3 mb-3" placeholder="pincode" required>
-                </div>
-            </div>
-           
-             <div id="Address" class="border rounded border-primary-subtle p-3 mb-2">
-                 <h4 class="mb-4">Guardian Details:</h4>
-                 <div>
-                    Guardian’s Full Name:
-                    <input type="text" placeholder="Enter full name" class="mx-3 mb-3">
-                 </div>
-                 <div>
-                    Guardian’s Contact Number:
-                    <input type="number" name="" class="mx-3 mb-3">
-                 </div>
-             </div>
+          <div class="d-flex flex-row text-center">
+            Date of Birth:
+            <input
+              type="date"
+              id="dob"
+              class="widthofinput mx-3 mb-3 form-control"
+              required
+            />
+          </div>
 
-             <div id="Address" class="border rounded border-primary-subtle p-3 mb-2">
-                 <h4 class="mb-4">Additional Information:</h4>
-                 <div>
-                    How did you hear about us?:
-                    <select class="mx-3 mb-3 form-select" required>
-                        <option>Select</option>
-                        <option>Friend</option>
-                        <option>Internet</option>
-                        <option>Relative</option>
-                        <option>Ads</option>
-                    </select>
-                 </div>
+          <div class="mb-3">
+            Gender:
 
-             </div>
-           
-            
-            
-       
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="Male"
+              class="mx-2"
+            />
+
+            <label for="male">Male</label>
+
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+              class="mx-2"
+            />
+
+            <label for="female">Female</label>
+
+            <input
+              type="radio"
+              id="other"
+              name="gender"
+              value="Other"
+              class="mx-2"
+            />
+
+            <label for="other">Other</label>
+          </div>
         </div>
-        
+
+        <div
+          id="AD"
+          class="border rounded border-primary-subtle p-4 mb-4 bg-light-subtle shadow"
+        >
+          <h4 class="mb-4 text-primary">Acadmic Details</h4>
+
+          <div class="d-flex flex-row text-center">
+            Last Completed Qualification:
+            <select id="qualification" class="mx-3 mb-3 form-select">
+              <option>Select</option>
+              <option>10th</option>
+              <option>12th</option>
+              <option>Postgraduate</option>
+              <option>Undergraduate</option>
+            </select>
+          </div>
+
+          <div class="d-flex flex-row text-center">
+            Percentage/Grade in Last Qualification:
+            <input
+              type="number"
+              id="percentage"
+              placeholder="Enter percentage"
+              min="0"
+              max="100"
+              class="mx-3 mb-3 form-control d-inline w-25"
+            />
+            %
+          </div>
+        </div>
+
+        <div
+          id="CI"
+          class="border rounded border-primary-subtle p-4 mb-4 bg-light-subtle shadow"
+        >
+          <h4 class="mb-4 text-primary">Course Information:</h4>
+
+          <div class="d-flex flex-row text-center">
+            Preferred Course:
+            <select id="course" class="mx-3 mb-3 form-select">
+              <option>Select</option>
+              <option>IIT-JEE</option>
+              <option>NEET</option>
+              <option>GATE</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            Batch Timing Preference:
+
+            <input type="checkbox" id="morning" value="Morning" class="mx-2" />
+
+            <label for="morning">Morning</label>
+
+            <input
+              type="checkbox"
+              id="afternoon"
+              value="Afternoon"
+              class="mx-2"
+            />
+
+            <label for="afternoon">Afternoon</label>
+
+            <input type="checkbox" id="evening" value="Evening" class="mx-2" />
+
+            <label for="evening">Evening</label>
+
+            <input type="checkbox" id="weekend" value="Weekend" class="mx-2" />
+
+            <label for="weekend">Weekend</label>
+          </div>
+        </div>
+
+        <div
+          id="Address"
+          class="border rounded border-primary-subtle p-4 mb-4 bg-light-subtle shadow"
+        >
+          <h4 class="mb-4 text-primary">Address</h4>
+
+          <div class="d-flex flex-row text-center">
+            Residential Address:
+            <textarea
+              id="address"
+              name="address"
+              rows="2"
+              cols="40"
+              placeholder="Enter house number, street, city, and pin code"
+              class="mx-3 mb-3 form-control"
+              required
+            ></textarea>
+          </div>
+
+          <div class="d-flex flex-row text-center">
+            City:
+            <input
+              type="text"
+              id="city"
+              placeholder="Enter city"
+              pattern="[A-Za-z ]+"
+              class="mx-3 mb-3 form-control"
+              required
+            />
+          </div>
+
+          <div class="d-flex flex-row align-items-center">
+            Pin Code:
+            <input
+              type="number"
+              id="pincode"
+              class="mx-3 mb-3 form-control"
+              placeholder="pincode"
+              required
+            />
+          </div>
+        </div>
+
+        <div
+          id="Guardian"
+          class="border rounded border-primary-subtle p-4 mb-4 bg-light-subtle shadow"
+        >
+          <h4 class="mb-4 text-primary">Guardian Details:</h4>
+
+          <div class="d-flex flex-row text-center">
+            Guardian’s Full Name:
+            <input
+              type="text"
+              id="guardianname"
+              placeholder="Enter full name"
+              class="mx-3 mb-3 form-control"
+            />
+          </div>
+
+          <div class="d-flex flex-row text-center">
+            Guardian’s Contact Number:
+            <input
+              type="number"
+              id="guardiancontact"
+              placeholder="Enter guardian number"
+              class="mx-3 mb-3 form-control"
+            />
+          </div>
+        </div>
+
+        <div
+          id="AdditionalInfo"
+          class="border rounded border-primary-subtle p-4 mb-4 bg-light-subtle shadow"
+        >
+          <h4 class="mb-4 text-primary">Additional Information:</h4>
+
+          <div>
+            How did you hear about us?:
+            <select id="reference" class="mx-3 mb-3 form-select" required>
+              <option>Select</option>
+              <option>Internet</option>
+              <option>Friend</option>
+              <option>Relative</option>
+              <option>Ads</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="d-flex gap-3">
+          <button type="submit" class="btn btn-primary px-4 py-2 fw-bold">
+            Submit Form
+          </button>
+
+          <button type="reset" class="btn btn-danger px-4 py-2 fw-bold">
+            Clear Form
+          </button>
+        </div>
+      </div>
     </form>
 
-
-     <script
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
