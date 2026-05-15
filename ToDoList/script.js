@@ -17,7 +17,7 @@ function addNewTask() {
 
     const i = document.createElement("i")
     i.classList.add("bi", "bi-trash")
-
+ 
     const span2 = document.createElement("span")
     span2.innerText = "Delete"
 
@@ -30,4 +30,19 @@ function addNewTask() {
 
     document.getElementById("tasklist").appendChild(li)
 
+    savetoLocalStorage(tasktoadd)
+
+    function savetoLocalStorage(tasktoadd){
+
+        const TaskArray = JSON.parse(localStorage.getItem(toDoTask)) || []
+        TaskArray.push(tasktoadd)
+        console.log(TaskArray);
+        const newtaskArray = JSON.stringify(TaskArray)
+        localStorage.setItem("toDoTask",newtaskArray)
+    }
+
+    function gettaskfromLocalStorage(){
+        const TaskArray = JSON.parse(localStorage.getItem(toDoTask)) || []
+
+    }
 }
