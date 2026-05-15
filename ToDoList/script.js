@@ -44,5 +44,8 @@ function addNewTask() {
     function gettaskfromLocalStorage(){
         const TaskArray = JSON.parse(localStorage.getItem(toDoTask)) || []
 
+        TaskArray.forEach(element => {
+            
+        });
     }
 }
